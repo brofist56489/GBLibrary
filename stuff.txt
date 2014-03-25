@@ -1,0 +1,8 @@
+Display
+	JFrame
+	Canvas
+		built in graphics
+		eventually per-pixel
+		much much later LWJGL gl integration
+		
+	
