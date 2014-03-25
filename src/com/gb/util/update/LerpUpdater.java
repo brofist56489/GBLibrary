@@ -14,7 +14,7 @@ public class LerpUpdater implements Updater, Runnable {
 	
 	public LerpUpdater(Updatable rec, int ticksPerSecond) {
 		this.receiver = rec;
-		nanoSecondsPerTick = ticksPerSecond / 1000000000D;
+		nanoSecondsPerTick = ticksPerSecond / 1000000000.0;
 		
 		lt = System.nanoTime();
 		now = lt;
@@ -22,6 +22,14 @@ public class LerpUpdater implements Updater, Runnable {
 		
 		constantRender = false;
 		running = false;
+	}
+	
+	public void setConstantRender(boolean c) {
+		constantRender = c;
+	}
+	
+	public boolean getConstantRender() {
+		return constantRender;
 	}
 	
 	public void start() {
